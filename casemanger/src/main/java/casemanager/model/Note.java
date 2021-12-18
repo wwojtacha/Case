@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long noteId;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "case_id")
     private Case myCase;

@@ -10,7 +10,7 @@ public class Case {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long caseId;
+    private Long id;
     @Column
     private String title;
     @Column
@@ -24,5 +24,11 @@ public class Case {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public Status getStatus() {
+        return status;
+    }
 
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }
